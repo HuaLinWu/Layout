@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530586BC1CEDBDAC00D7D8E6 /* LayoutImplement.m in Sources */ = {isa = PBXBuildFile; fileRef = 530586BB1CEDBDAC00D7D8E6 /* LayoutImplement.m */; };
 		53C77A111CE9E2DA00C90CAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C77A101CE9E2DA00C90CAD /* main.m */; };
 		53C77A141CE9E2DA00C90CAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C77A131CE9E2DA00C90CAD /* AppDelegate.m */; };
 		53C77A171CE9E2DA00C90CAD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C77A161CE9E2DA00C90CAD /* ViewController.m */; };
 		53C77A1A1CE9E2DB00C90CAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C77A181CE9E2DB00C90CAD /* Main.storyboard */; };
 		53C77A1C1CE9E2DB00C90CAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53C77A1B1CE9E2DB00C90CAD /* Assets.xcassets */; };
 		53C77A1F1CE9E2DB00C90CAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C77A1D1CE9E2DB00C90CAD /* LaunchScreen.storyboard */; };
+		53C77A281CE9E44300C90CAD /* LayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C77A271CE9E44300C90CAD /* LayoutView.m */; };
+		53C77A361CEAB1E500C90CAD /* LayoutFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C77A351CEAB1E500C90CAD /* LayoutFactory.m */; };
+		53C77A481CEACA6800C90CAD /* FlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C77A471CEACA6800C90CAD /* FlowLayout.m */; };
+		53C77A4B1CEAE64A00C90CAD /* FlowLayoutImplement.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C77A4A1CEAE64A00C90CAD /* FlowLayoutImplement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		530586BA1CEDBDAC00D7D8E6 /* LayoutImplement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutImplement.h; sourceTree = "<group>"; };
+		530586BB1CEDBDAC00D7D8E6 /* LayoutImplement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutImplement.m; sourceTree = "<group>"; };
 		53C77A0C1CE9E2DA00C90CAD /* LinearLayoutView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinearLayoutView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C77A101CE9E2DA00C90CAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		53C77A121CE9E2DA00C90CAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +33,22 @@
 		53C77A1B1CE9E2DB00C90CAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53C77A1E1CE9E2DB00C90CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53C77A201CE9E2DB00C90CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53C77A261CE9E44300C90CAD /* LayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayoutView.h; path = ../LayoutView.h; sourceTree = "<group>"; };
+		53C77A271CE9E44300C90CAD /* LayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayoutView.m; path = ../LayoutView.m; sourceTree = "<group>"; };
+		53C77A341CEAB1E500C90CAD /* LayoutFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayoutFactory.h; path = ../LayoutFactory.h; sourceTree = "<group>"; };
+		53C77A351CEAB1E500C90CAD /* LayoutFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayoutFactory.m; path = ../LayoutFactory.m; sourceTree = "<group>"; };
+		53C77A3B1CEAC87700C90CAD /* BorderLayoutProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderLayoutProtocol.h; sourceTree = "<group>"; };
+		53C77A3C1CEAC87700C90CAD /* BoxLayoutProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxLayoutProtocol.h; sourceTree = "<group>"; };
+		53C77A3D1CEAC87700C90CAD /* CardLayoutProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardLayoutProtocol.h; sourceTree = "<group>"; };
+		53C77A3E1CEAC87700C90CAD /* FlowLayoutProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowLayoutProtocol.h; sourceTree = "<group>"; };
+		53C77A3F1CEAC87700C90CAD /* GridBagLayoutProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridBagLayoutProtocol.h; sourceTree = "<group>"; };
+		53C77A401CEAC87700C90CAD /* GridLayoutProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridLayoutProtocol.h; sourceTree = "<group>"; };
+		53C77A411CEAC87700C90CAD /* LayoutImplementProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutImplementProtocol.h; sourceTree = "<group>"; };
+		53C77A421CEAC87700C90CAD /* LayoutProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutProtocol.h; sourceTree = "<group>"; };
+		53C77A461CEACA6800C90CAD /* FlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowLayout.h; sourceTree = "<group>"; };
+		53C77A471CEACA6800C90CAD /* FlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowLayout.m; sourceTree = "<group>"; };
+		53C77A491CEAE64A00C90CAD /* FlowLayoutImplement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowLayoutImplement.h; sourceTree = "<group>"; };
+		53C77A4A1CEAE64A00C90CAD /* FlowLayoutImplement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowLayoutImplement.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +62,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		530586821CEC141500D7D8E6 /* layoutConfig */ = {
+			isa = PBXGroup;
+			children = (
+				53C77A261CE9E44300C90CAD /* LayoutView.h */,
+				53C77A271CE9E44300C90CAD /* LayoutView.m */,
+				53C77A341CEAB1E500C90CAD /* LayoutFactory.h */,
+				53C77A351CEAB1E500C90CAD /* LayoutFactory.m */,
+			);
+			path = layoutConfig;
+			sourceTree = "<group>";
+		};
 		53C77A031CE9E2DA00C90CAD = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +97,10 @@
 				53C77A151CE9E2DA00C90CAD /* ViewController.h */,
 				53C77A161CE9E2DA00C90CAD /* ViewController.m */,
 				53C77A181CE9E2DB00C90CAD /* Main.storyboard */,
+				530586821CEC141500D7D8E6 /* layoutConfig */,
+				53C77A451CEACA6800C90CAD /* layout */,
+				53C77A431CEAC99D00C90CAD /* ProtocolImplement */,
+				53C77A3A1CEAC87700C90CAD /* Protocol */,
 				53C77A1B1CE9E2DB00C90CAD /* Assets.xcassets */,
 				53C77A1D1CE9E2DB00C90CAD /* LaunchScreen.storyboard */,
 				53C77A201CE9E2DB00C90CAD /* Info.plist */,
@@ -77,6 +115,41 @@
 				53C77A101CE9E2DA00C90CAD /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		53C77A3A1CEAC87700C90CAD /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				53C77A3E1CEAC87700C90CAD /* FlowLayoutProtocol.h */,
+				53C77A3B1CEAC87700C90CAD /* BorderLayoutProtocol.h */,
+				53C77A3C1CEAC87700C90CAD /* BoxLayoutProtocol.h */,
+				53C77A3D1CEAC87700C90CAD /* CardLayoutProtocol.h */,
+				53C77A3F1CEAC87700C90CAD /* GridBagLayoutProtocol.h */,
+				53C77A401CEAC87700C90CAD /* GridLayoutProtocol.h */,
+				53C77A411CEAC87700C90CAD /* LayoutImplementProtocol.h */,
+				53C77A421CEAC87700C90CAD /* LayoutProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		53C77A431CEAC99D00C90CAD /* ProtocolImplement */ = {
+			isa = PBXGroup;
+			children = (
+				530586BA1CEDBDAC00D7D8E6 /* LayoutImplement.h */,
+				530586BB1CEDBDAC00D7D8E6 /* LayoutImplement.m */,
+				53C77A491CEAE64A00C90CAD /* FlowLayoutImplement.h */,
+				53C77A4A1CEAE64A00C90CAD /* FlowLayoutImplement.m */,
+			);
+			path = ProtocolImplement;
+			sourceTree = "<group>";
+		};
+		53C77A451CEACA6800C90CAD /* layout */ = {
+			isa = PBXGroup;
+			children = (
+				53C77A461CEACA6800C90CAD /* FlowLayout.h */,
+				53C77A471CEACA6800C90CAD /* FlowLayout.m */,
+			);
+			path = layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +222,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53C77A4B1CEAE64A00C90CAD /* FlowLayoutImplement.m in Sources */,
 				53C77A171CE9E2DA00C90CAD /* ViewController.m in Sources */,
+				53C77A481CEACA6800C90CAD /* FlowLayout.m in Sources */,
+				53C77A281CE9E44300C90CAD /* LayoutView.m in Sources */,
+				53C77A361CEAB1E500C90CAD /* LayoutFactory.m in Sources */,
+				530586BC1CEDBDAC00D7D8E6 /* LayoutImplement.m in Sources */,
 				53C77A141CE9E2DA00C90CAD /* AppDelegate.m in Sources */,
 				53C77A111CE9E2DA00C90CAD /* main.m in Sources */,
 			);
@@ -302,6 +380,7 @@
 				53C77A251CE9E2DB00C90CAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
