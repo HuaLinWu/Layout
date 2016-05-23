@@ -14,6 +14,8 @@
 @property(nonatomic,assign)float y;
 @property(nonatomic,assign)float height;
 @property(nonatomic,assign)float width;
+@property(nonatomic,assign)float line;//当前控件所在的行
+@property(nonatomic,assign)float column;//当前控件所在的列
 @property(nonatomic,weak)UIView *view;
 @end
 
@@ -37,7 +39,7 @@
         }
         case FlowLayoutAlignmentCenter:
         {
-            
+            [self layoutAlignmentCenterWithConstrainedToSize:size layoutItems:items vgap:vgap hgap:hgap];
             break;
         }
         default:
@@ -78,16 +80,18 @@
             item.y = (line+1)*vgap+sumLineHeight;
             item.width  = width;
             item.height = height;
+            item.line = line;
+            item.column = column;
             lineMaxHeight = MAX(lineMaxHeight, height);
             sumColumnWidth = sumColumnWidth+width;
             column ++;
-            
         }
         else
         {
             //表示垂直放不下的时候
             item.width=0;
             item.height =0;
+            item.line = line;
         }
         [self.flowLayoutItems addObject:item];
     }
@@ -102,8 +106,6 @@
         goto paixu;
     }
     }
-
-  
 }
 #pragma mark 实现右对齐，如果横向无法放入的时候，将会换行显示，如果纵向高度也不够将会控件的宽高都至为0
 - (void)layoutAlignmentRightWithConstrainedToSize:(CGSize)size layoutItems:(NSArray *)layoutItems vgap:(float)vgap hgap:(float)hgap
@@ -130,6 +132,8 @@
             item.y = (line+1)*vgap+sumLineHeight;
             item.width  = width;
             item.height = height;
+            item.line = line;
+            item.column = column;
             lineMaxHeight = MAX(lineMaxHeight, height);
             sumColumnWidth = sumColumnWidth+width;
             column ++;
@@ -140,6 +144,7 @@
             //表示垂直放不下的时候
             item.width=0;
             item.height =0;
+            item.line = line;
         }
         [self.flowLayoutItems addObject:item];
     }
@@ -154,13 +159,75 @@
         goto paixu;
     }
     }
-    
-    
 }
 #pragma mark 实现居中对齐 
 - (void)layoutAlignmentCenterWithConstrainedToSize:(CGSize)size layoutItems:(NSArray *)layoutItems vgap:(float)vgap hgap:(float)hgap
 {
-    
+    [self.flowLayoutItems removeAllObjects];
+    float sumLineHeight =0;
+    float sumColumnWidth = 0;
+    float column  =0;
+    float line =0;
+    float lineMaxHeight=0;
+    for(int i=0;i<layoutItems.count;i++)
+    {
+        FlowLayoutItem *item = [[FlowLayoutItem alloc] init];
+        UIView *subView = layoutItems[i];
+        item.view = subView;
+        float width  = CGRectGetWidth(subView.frame);
+        float height = CGRectGetHeight(subView.frame);
+    paixu:if(sumColumnWidth+(column+1)*hgap+width<=size.width-hgap)
+    {
+        //水平可以放的下垂直放的下
+        if((line+1)*vgap+sumLineHeight+height<=size.height-vgap)
+        {
+            item.y = (line+1)*vgap+sumLineHeight;
+            item.width  = width;
+            item.height = height;
+            item.line = line;
+            item.column = column;
+            lineMaxHeight = MAX(lineMaxHeight, height);
+            sumColumnWidth = sumColumnWidth+width;
+            column ++;
+            
+        }
+        else
+        {
+            //表示垂直放不下的时候
+            item.width=0;
+            item.height =0;
+            item.line = line;
+        }
+        [self.flowLayoutItems addObject:item];
+        
+        for(int index =0; index<self.flowLayoutItems.count;index++)
+        {
+            FlowLayoutItem *item = self.flowLayoutItems[index];
+            if(item.line==line&&item.column==0)
+            {
+                //表示这个第一个
+                item.x = (size.width-(sumColumnWidth+(column+1)*hgap))/2;
+                
+            }
+            else if (item.line==line)
+            {
+                FlowLayoutItem *lastItem = ((FlowLayoutItem *)self.flowLayoutItems[index-1]);
+                item.x = lastItem.x+hgap+lastItem.width;
+            }
+        }
+    }
+    else
+    {
+        //表示水平放不下
+        line++;
+        column =0;
+        sumLineHeight = sumLineHeight+lineMaxHeight;
+        sumColumnWidth = 0;
+        lineMaxHeight =0;
+        goto paixu;
+    }
+    }
+
 }
 #pragma mark set/get
 - (NSMutableArray *)flowLayoutItems

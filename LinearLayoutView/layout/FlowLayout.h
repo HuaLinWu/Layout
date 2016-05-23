@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "FlowLayoutProtocol.h"
 @interface FlowLayout : NSObject<FlowLayoutProtocol>
 //对齐方式
@@ -15,5 +16,4 @@
 @property(nonatomic,assign)float hgap;
 //垂直间距
 @property(nonatomic,assign)float vgap;
-
 @end

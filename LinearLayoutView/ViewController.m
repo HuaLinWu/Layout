@@ -10,22 +10,23 @@
 #import "LayoutView.h"
 #import "FlowLayout.h"
 @interface ViewController ()
-
+{
+    __weak IBOutlet LayoutView *linearLayoutView;
+    
+}
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    LayoutView *linearLayoutView = [[LayoutView alloc] initWithFrame:CGRectMake(50, 100, 195, 510)];
-    [linearLayoutView setBackgroundColor: [UIColor grayColor]];
     FlowLayout *flowLayout = [[FlowLayout alloc] init];
     flowLayout.vgap = 10;
     flowLayout.hgap = 5;
-    flowLayout.align = FlowLayoutAlignmentLeft;
+    flowLayout.align = FlowLayoutAlignmentCenter;
     linearLayoutView.layoutObject =  flowLayout;
     //放入标签
-    for(int i=0;i<20;i++)
+    for(int i=0;i<4;i++)
     {
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60, 20)];
         if(i%2==0)
