@@ -14,12 +14,11 @@ typedef NS_ENUM(NSInteger,FlowLayoutAlignment)
      FlowLayoutAlignmentCenter,//居中对齐
      FlowLayoutAlignmentRight//右对齐
 };
-@protocol FlowLayoutProtocol <LayoutProtocol>
+@protocol FlowLayoutProtocol <LayoutProtocol,LayoutSizeProtocol>
 //对齐方式
 @property(nonatomic,assign)FlowLayoutAlignment align;
 //水平间距
 @property(nonatomic,assign)float hgap;
 //垂直间距
 @property(nonatomic,assign)float vgap;
-
 @end

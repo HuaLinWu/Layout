@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "LayoutProtocol.h"
 @interface LayoutView : UIView<LayoutProtocol>
-@property(nonatomic)id<LayoutProtocol> layoutObject;
+@property(nonatomic)id<LayoutProtocol,LayoutSizeProtocol> layoutObject;
 @end

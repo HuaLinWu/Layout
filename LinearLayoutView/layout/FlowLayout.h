@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "FlowLayoutProtocol.h"
 @interface FlowLayout : NSObject<FlowLayoutProtocol>
+#pragma mark FlowLayoutProtocol
 //对齐方式
 @property(nonatomic,assign)FlowLayoutAlignment align;
 //水平间距

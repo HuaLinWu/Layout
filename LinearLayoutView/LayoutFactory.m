@@ -18,12 +18,13 @@
     });
     return factory;
 }
-- (void)layoutSubviewsWithLayout:(id<LayoutProtocol>)layout layoutItems:(NSArray *)items constrainedSize:(CGSize)size
+- (void)layoutSubviewsWithLayout:(id<LayoutProtocol,LayoutSizeProtocol>)layout layoutItems:(NSArray *)items constrainedSize:(CGSize)size
 {
     if([layout.layoutObject respondsToSelector:@selector(layoutSubviewsWithLayout:layoutItems:constrainedSize:)])
     {
         id <LayoutImplementProtocol> tempLayoutImaplement = (id <LayoutImplementProtocol> )layout.layoutObject;
         [tempLayoutImaplement layoutSubviewsWithLayout:layout layoutItems:items constrainedSize:size];
+        
     }
 }
 @end

@@ -43,7 +43,6 @@
 		53C77A3E1CEAC87700C90CAD /* FlowLayoutProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowLayoutProtocol.h; sourceTree = "<group>"; };
 		53C77A3F1CEAC87700C90CAD /* GridBagLayoutProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridBagLayoutProtocol.h; sourceTree = "<group>"; };
 		53C77A401CEAC87700C90CAD /* GridLayoutProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridLayoutProtocol.h; sourceTree = "<group>"; };
-		53C77A411CEAC87700C90CAD /* LayoutImplementProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutImplementProtocol.h; sourceTree = "<group>"; };
 		53C77A421CEAC87700C90CAD /* LayoutProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutProtocol.h; sourceTree = "<group>"; };
 		53C77A461CEACA6800C90CAD /* FlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowLayout.h; sourceTree = "<group>"; };
 		53C77A471CEACA6800C90CAD /* FlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowLayout.m; sourceTree = "<group>"; };
@@ -126,7 +125,6 @@
 				53C77A3D1CEAC87700C90CAD /* CardLayoutProtocol.h */,
 				53C77A3F1CEAC87700C90CAD /* GridBagLayoutProtocol.h */,
 				53C77A401CEAC87700C90CAD /* GridLayoutProtocol.h */,
-				53C77A411CEAC87700C90CAD /* LayoutImplementProtocol.h */,
 				53C77A421CEAC87700C90CAD /* LayoutProtocol.h */,
 			);
 			path = Protocol;

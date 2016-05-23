@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LayoutImplementProtocol.h"
+#import "LayoutProtocol.h"
 @interface LayoutFactory : NSObject<LayoutImplementProtocol>
 +(instancetype)shareFactory;
 @end

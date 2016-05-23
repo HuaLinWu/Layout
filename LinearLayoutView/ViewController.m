@@ -12,7 +12,6 @@
 @interface ViewController ()
 {
     __weak IBOutlet LayoutView *linearLayoutView;
-    
 }
 @end
 
@@ -24,9 +23,9 @@
     flowLayout.vgap = 10;
     flowLayout.hgap = 5;
     flowLayout.align = FlowLayoutAlignmentCenter;
-    linearLayoutView.layoutObject =  flowLayout;
+     linearLayoutView.layoutObject =  flowLayout;
     //放入标签
-    for(int i=0;i<4;i++)
+    for(int i=0;i<1;i++)
     {
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60, 20)];
         if(i%2==0)
@@ -42,7 +41,6 @@
         label.layer.borderColor = [UIColor greenColor].CGColor;
         [linearLayoutView addSubview:label];
     }
-    
     [self.view addSubview:linearLayoutView];
 }
 

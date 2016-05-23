@@ -10,9 +10,10 @@
 #import "FlowLayoutImplement.h"
 
 @implementation FlowLayout
-
-- (id<LayoutProtocol>)layoutObject
+@synthesize constrainedSize;
+- (id<LayoutProtocol,LayoutSizeProtocol>)layoutObject
 {
     return [FlowLayoutImplement shareLayoutImplement];
 }
+
 @end
