@@ -17,4 +17,5 @@
 @property(nonatomic,assign)float hgap;
 //垂直间距
 @property(nonatomic,assign)float vgap;
+
 @end

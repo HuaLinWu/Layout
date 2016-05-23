@@ -21,4 +21,6 @@ typedef NS_ENUM(NSInteger,FlowLayoutAlignment)
 @property(nonatomic,assign)float hgap;
 //垂直间距
 @property(nonatomic,assign)float vgap;
+
+-(CGSize)sizeWithLayoutItems:(NSArray *)items constrainedSize:(CGSize)_constrainedSize;
 @end

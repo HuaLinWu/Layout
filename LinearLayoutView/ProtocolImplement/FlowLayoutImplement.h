@@ -9,4 +9,5 @@
 #import <Foundation/Foundation.h>
 #import "LayoutImplement.h"
 @interface FlowLayoutImplement : LayoutImplement
+-(CGSize)sizeWithLayout:(id<LayoutProtocol,LayoutSizeProtocol>)layout layoutItems:(NSArray *)items constrainedSize:(CGSize)_constrainedSize;
 @end

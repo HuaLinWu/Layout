@@ -15,5 +15,8 @@
 {
     return [FlowLayoutImplement shareLayoutImplement];
 }
-
+-(CGSize)sizeWithLayoutItems:(NSArray *)items constrainedSize:(CGSize)_constrainedSize
+{
+   return  [(FlowLayoutImplement *)self.layoutObject sizeWithLayout:self layoutItems:items constrainedSize:_constrainedSize];
+}
 @end

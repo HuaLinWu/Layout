@@ -23,12 +23,13 @@
 
 @end
 @interface FlowLayoutImplement ()
+@property(nonatomic,assign)CGSize fitSize;
 @property(nonatomic,strong)NSMutableArray *flowLayoutItems;
 @end
 @implementation FlowLayoutImplement
 - (void)layoutSubviewsWithLayout:(id<LayoutProtocol,LayoutSizeProtocol>)layout layoutItems:(NSArray *)items constrainedSize:(CGSize)size
 {
-    [self sizeWithLayout:layout layoutItems:items constrainedSize:size];
+   [self sizeWithLayout:layout layoutItems:items constrainedSize:size];
     for( int i=0;i<self.flowLayoutItems.count;i++)
     {
         FlowLayoutItem *item = self.flowLayoutItems[i];
@@ -89,6 +90,7 @@
         goto paixu;
     }
     }
+    self.fitSize = fitSize;
     return fitSize;
 }
 #pragma mark 实现右对齐，如果横向无法放入的时候，将会换行显示，如果纵向高度也不够将会控件的宽高都至为0
@@ -146,14 +148,14 @@
         goto paixu;
     }
     }
+    self.fitSize = fitSize;
     return fitSize;
 }
 #pragma mark 实现居中对齐 
 - (CGSize)layoutAlignmentCenterWithConstrainedToSize:(CGSize)size layoutItems:(NSArray *)layoutItems vgap:(float)vgap hgap:(float)hgap
 {
-    
     [self.flowLayoutItems removeAllObjects];
-     CGSize fitSize = CGSizeZero;
+    CGSize fitSize = CGSizeZero;
     float sumLineHeight =0;
     float sumColumnWidth = 0;
     float column  =0;
@@ -219,10 +221,13 @@
         goto paixu;
     }
     }
+    self.fitSize = fitSize;
     return fitSize;
 }
 -(CGSize)sizeWithLayout:(id<LayoutProtocol,LayoutSizeProtocol>)layout layoutItems:(NSArray *)items constrainedSize:(CGSize)_constrainedSize
 {
+    if(CGSizeEqualToSize(self.fitSize , CGSizeZero))
+    {
     id<FlowLayoutProtocol>tempLayout = (id <FlowLayoutProtocol>)layout;
     float vgap = tempLayout.vgap;
     float hgap = tempLayout.hgap;
@@ -241,6 +246,8 @@
             return [self layoutAlignmentLeftWithConstrainedToSize:_constrainedSize layoutItems:items vgap:vgap hgap:hgap];
         }
     }
+    }
+    return self.fitSize;
 }
 #pragma mark set/get
 - (NSMutableArray *)flowLayoutItems

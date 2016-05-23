@@ -25,7 +25,7 @@
     flowLayout.align = FlowLayoutAlignmentCenter;
      linearLayoutView.layoutObject =  flowLayout;
     //放入标签
-    for(int i=0;i<1;i++)
+    for(int i=0;i<20;i++)
     {
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60, 20)];
         if(i%2==0)
@@ -41,9 +41,15 @@
         label.layer.borderColor = [UIColor greenColor].CGColor;
         [linearLayoutView addSubview:label];
     }
+  
     [self.view addSubview:linearLayoutView];
 }
-
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+     NSLog(@"------->%@",NSStringFromCGSize([(FlowLayout *)linearLayoutView.layoutObject sizeWithLayoutItems:[linearLayoutView subviews] constrainedSize:linearLayoutView.frame.size]));
+   
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
