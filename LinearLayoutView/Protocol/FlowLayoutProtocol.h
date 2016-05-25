@@ -2,8 +2,8 @@
 //  FlowLayoutProtocol.h
 //  LinearLayoutView
 //  线型布局的协议
-//  Created by 吴华林(平安好房技术中心产品研发部IOS研发团队) on 16/5/16.
-//  Copyright © 2016年 吴华林(平安好房技术中心产品研发部IOS研发团队). All rights reserved.
+//  Created by 吴华林 on 16/5/16.
+//  Copyright © 2016年 吴华林. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
