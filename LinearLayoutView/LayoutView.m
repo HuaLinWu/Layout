@@ -21,7 +21,6 @@
         size = self.frame.size;
     }
     [[LayoutFactory shareFactory] layoutSubviewsWithLayout:self.layoutObject layoutItems:[self subviews] constrainedSize:size];
-    
 }
 
 @end

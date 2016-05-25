@@ -154,6 +154,7 @@
 #pragma mark 实现居中对齐 
 - (CGSize)layoutAlignmentCenterWithConstrainedToSize:(CGSize)size layoutItems:(NSArray *)layoutItems vgap:(float)vgap hgap:(float)hgap
 {
+    
     [self.flowLayoutItems removeAllObjects];
     CGSize fitSize = CGSizeZero;
     float sumLineHeight =0;
@@ -172,6 +173,7 @@
     {
        
         //水平可以放的下垂直放的下
+       
         if((line+1)*vgap+sumLineHeight+height<=size.height-vgap)
         {
             item.y = (line+1)*vgap+sumLineHeight;
@@ -184,6 +186,7 @@
             column ++;
             fitSize.width = MAX(fitSize.width, sumColumnWidth+(column+1)*hgap);
             fitSize.height = MAX(fitSize.height , (sumLineHeight+(line+2)*vgap+lineMaxHeight));
+            
         }
         else
         {
@@ -226,8 +229,7 @@
 }
 -(CGSize)sizeWithLayout:(id<LayoutProtocol,LayoutSizeProtocol>)layout layoutItems:(NSArray *)items constrainedSize:(CGSize)_constrainedSize
 {
-    if(CGSizeEqualToSize(self.fitSize , CGSizeZero))
-    {
+    
     id<FlowLayoutProtocol>tempLayout = (id <FlowLayoutProtocol>)layout;
     float vgap = tempLayout.vgap;
     float hgap = tempLayout.hgap;
@@ -245,7 +247,6 @@
         {
             return [self layoutAlignmentLeftWithConstrainedToSize:_constrainedSize layoutItems:items vgap:vgap hgap:hgap];
         }
-    }
     }
     return self.fitSize;
 }

@@ -6,6 +6,7 @@
 //  Copyright © 2016年 吴华林(平安好房技术中心产品研发部IOS研发团队). All rights reserved.
 //
 #import <UIKit/UIKit.h>
+#import "MacroDefinition.h"
 @protocol LayoutProtocol;
 #pragma mark 跟布局的size 有关的协议
 @protocol LayoutSizeProtocol <NSObject>

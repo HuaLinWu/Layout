@@ -17,18 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pw-NN-cof" customClass="LayoutView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9pw-NN-cof" customClass="LayoutView">
+                                <rect key="frame" x="71" y="81" width="130" height="110"/>
                                 <color key="backgroundColor" red="1" green="0.49915854151554773" blue="0.37880793763163234" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9pw-NN-cof" secondAttribute="bottom" id="LP6-tt-omA"/>
-                            <constraint firstItem="9pw-NN-cof" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qn7-oO-fOM"/>
-                            <constraint firstItem="9pw-NN-cof" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gXf-sQ-PJa"/>
-                            <constraint firstAttribute="trailing" secondItem="9pw-NN-cof" secondAttribute="trailing" id="ole-Du-Hc1"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="linearLayoutView" destination="9pw-NN-cof" id="z4w-YI-NEu"/>
